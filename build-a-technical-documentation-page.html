@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS selectors</title>
+    <link rel="stylesheet" href="build-a-technical-documentation-page.css">
+  </head>
+  <body>
+      <nav id="navbar">
+      <header>CSS selectors</header>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Introduction</a></li>
+        <li><a class="nav-link" href="#Basic_selectors">Basic selectors</a></li>
+        <li><a class="nav-link" href="#Grouping_selectors">Grouping selectors</a></li>
+        <li><a class="nav-link" href="#Combinators">Combinators</a></li>
+        <li><a class="nav-link" href="#Pseudo-classes_and_pseudo-elements">Pseudo-classes and pseudo-elements</a></li>
+      <li><a class="nav-link" href="#Structure_of_a_selector">Structure of a selector</a></li>
+      <li><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header><h1>Introduction</h1></header>
+        <p>CSS selectors define the pattern to select elements to which a set of CSS rules are then applied.</p>
+        <p>CSS selectors can be grouped into the following categories based on the type of elements they can select.</p>
+        </section>
+      <section class="main-section" id="Basic_selectors">
+        <header><h1>Basic selectors</h1></header>
+        <h2>Universal selector</h2>
+        <p>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.</p>
+        <p>Syntax: <code>* ns|* *|*</code></p>
+        <p>Example: <kbd>*</kbd> will match all the elements of the document.</p>
+        <h2>Type selector</h2>
+        <p>Selects all elements that have the given node name.</p>
+        <p>Syntax: <code>elementname</code></p>
+        <p>Example: <kbd>input</kbd> will match any <kbd>&ltinput&gt</kbd> element.</p>
+        <h2>Class selector</h2>
+        <p>Selects all elements that have the given <kbd>class</kbd> attribute.</p>
+        <p>Syntax: <code>.classname</code></p>
+        <p>Example: <kbd>.index</kbd> will match any element that has <kbd>class="index"</kbd>.</p>
+        <h2>ID selector</h2>
+        <p>Selects an element based on the value of its <kbd>id</kbd> attribute. There should be only one element with a given ID in a document.</p>
+        <p>Syntax: <code>#idname</code></p>
+        <p>Example: <kbd>#toc</kbd> will match the element that has <kbd>id="toc"</kbd>.</p>
+        <h2>Attribute selector</h2>
+        <p>Selects all elements that have the given attribute.</p>
+        <p>Syntax: <code>[attr] [attr=value] [attr~=value] [attr|=value] [attr^=value] [attr$=value] [attr*=value]</code></p>
+        <p>Example: <kbd>[autoplay]</kbd> will match all elements that have the <kbd>autoplay</kbd> attribute set (to any value).</p>
+        </section>
+      <section class="main-section" id="Grouping_selectors">
+        <header><h1>Grouping selectors</h1></header>
+        <h2>Selector list</h2>
+        <p>The <kbd>,</kbd> selector is a grouping method that selects all the matching nodes.</p>
+        <p>Syntax: <code>A, B</code></p>
+        <p>Example: <kbd>div, span</kbd> will match both <kbd>&ltspan&gt</kbd> and <kbd>&ltdiv&gt</kbd> elements.</p>
+        </section>
+      <section class="main-section" id="Combinators">
+        <header><h1>Combinators</h1></header>
+        <h2>Descendant combinator</h2>
+        <p>The <kbd>" "</kbd> (space) combinator selects nodes that are descendants of the first element.</p>
+        <p>Syntax: <code>A B</code></p>
+        <p>Example: <kbd>div span</kbd> will match all <kbd>&ltspan&gt</kbd> elements that are inside a <kbd>&ltdiv&gt</kbd> element.</p>
+        <h2>Child combinator</h2>
+        <p>The <kbd>></kbd> combinator selects nodes that are direct children of the first element.</p>
+        <p>Syntax: <code>A > B</code></p>
+        <p>Example: <kbd>ul > li</kbd> will match all <kbd>&ltli&gt</kbd> elements that are nested directly inside a <kbd>&ltul&gt</kbd> element.</p>
+        <h2>General sibling combinator</h2>
+        <p>The <kbd>~</kbd> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.</p>
+        <p>Syntax: <code>A ~ B</code></p>
+        <p>Example: <kbd>p ~ span</kbd> will match all <kbd>&ltspan&gt</kbd> elements that follow a <kbd>&ltp&gt</kbd>, immediately or not.</p>
+        <h2>Adjacent sibling combinator</h2>
+        <p>The <kbd>+</kbd> combinator matches the second element only if it immediately follows the first element.</p>
+        <p>Syntax: <code>A + B</code></p>
+        <p>Example: <kbd>h2 + p</kbd> will match the first <kbd>&ltp&gt</kbd> element that immediately follows an <kbd>h2</kbd> element.</p>
+        <h2>Column combinator</h2>
+        <p>Experimental</p>
+<p>The <kbd>||</kbd> combinator selects nodes which belong to a column.</p>
+        <p>Syntax: <code>A || B</code></p>
+        <p>Example: <kbd>col || td</kbd> will match all <kbd>&lttd&gt</kbd> elements that belong to the scope of the <kbd>&ltcol&gt</kbd>.</p>
+        </section>
+      <section class="main-section" id="Pseudo-classes_and_pseudo-elements">
+        <header><h1>Pseudo-classes and pseudo-elements</h1></header>
+        <h2>Pseudo classes</h2>
+        <p>The <kbd>:</kbd> pseudo allow the selection of elements based on state information that is not contained in the document tree.</p>
+        <p>Example: <kbd>a:visited</kbd> will match all <kbd>&lta&gt</kbd> elements that have been visited by the user.</p>
+        <h2>Pseudo elements</h2>
+        <p>The <kbd>::</kbd> pseudo represent entities that are not included in HTML./p>
+        <p>Example: <kbd>p::first-line</kbd> will match the first line of all <kbd>&ltp&gt</kbd> elements.</p>
+        </section>
+      <section class="main-section" id="Structure_of_a_selector">
+        <header><h1>Structure of a selector</h1></header>
+        <p>The term 'selector' can refer to one of the following:</p>
+        <ul>
+        <li>Simple selector</li>
+        <p>A selector with a single component, such as a single id selector or type selector, that's not used in combination with or contains any other selector component or combinator. A given element is said to match a simple selector when that simple selector accurately describes the element. All basic selectors, attributes, and single pseudo-classes and pseudo-elements are simple selectors.</p>
+        <li>Compound selector</li>
+        <p>A sequence of simple selectors that are not separated by a combinator. A compound selector represents a set of simultaneous conditions on a single element. A given element is said to match a compound selector when the element matches all the simple selectors in the compound selector.</p>
+        <p>In a compound selector, the type selector or a universal selector in a compound selector must come first in the sequence of selectors. Only one type selector or universal selector is allowed in the sequence. Since whitespace represents the descendant combinator, no whitespace is allowed between the simple selectors in a compound selector.</p>
+        <p>Example: <code>a#selected {...}</code></p>
+        <li>Complex selector</li>
+        <p>A sequence of one or more simple and/or compound selectors that are separated by combinators. A complex selector represents a set of simultaneous conditions on a set of elements. These conditions apply in the context of relationships described by the combinators. A given element is said to match a complex selector when the element matches compound selectors and the combinators between the compound selectors.</p>
+        <p>Examples: <code>a#selected > .icon {...}, .box h2 + p {...}, a .icon {...}</code></p>
+        <li>Relative selector</li>
+        <p>A selector representing an element relative to one or more anchor elements preceded by a combinator. Relative selectors that don't begin with an explicit combinator have an implied descendant combinator.</p>
+        <p>Examples: <code>+ div#topic > #reference {...}, > .icon {...}, dt:has(+ img) ~ dd {...}</code></p>
+        <li>Selector list</li>
+        <p>A comma-separated list of simple, compound, or complex selectors. If the constituent selector type of a selector list is important but unspecified, it is called a complex selector list. A given element is said to match a selector list when the element matches any (at least one) of the selectors in that selector list. Read more about when a selector list is deemed invalid and how to construct a forgiving selector list.</p>
+        <p>Example: <code>#main, article.heading {...}</code></p>
+        </ul>
+        </section>
+      <section class="main-section" id="Reference">
+        <header><h1>Reference</h1></header>
+        <p>All the documentation in this page is taken from <a id="reference_link" target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors">MDN</a></p>
+        </section>
+    </main>
+  </body>
+</html>

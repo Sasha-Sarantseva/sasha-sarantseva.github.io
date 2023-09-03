@@ -1,0 +1,63 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+html {
+  font-family: Verdana, sans-serif;
+  color: #1b1b32;
+}
+
+body {
+  background-color: #f5f6f7;
+  margin: 0;
+}
+
+h1 {
+  font-size: 1.6em;
+  border-bottom: 3px solid #dfdfe2;
+}
+
+nav > header {
+  font-size: 1.7em;
+  text-align: center;
+}
+
+nav {
+  position: fixed;
+  width: 200px;
+  background-color: lightgray;
+  height: 100%;
+  padding: 10px;
+}
+
+main {
+  position: absolute;
+  left: 235px;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 1em;
+  margin-left: -1.5em;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.2em;
+}
+
+code {
+  font-size: 1.25em;
+  font-weight: bold;
+  background-color: lightgray;
+  padding: 0.25em 0.5em;
+}
+
+kbd {
+  font-size: 1.25em;
+  background-color:#f0efdf;
+  padding: 0.25em 0.25em;
+}
