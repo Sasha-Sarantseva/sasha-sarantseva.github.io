@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Roman Holidays Survey Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 id="title">Roman Holidays Survey Form</h1>
+    <p id="description">Please tell us about the trip you plan so we can offer you a <em>perfect</em> personalized tour</p>
+  </body>
+  <form id="survey-form">
+    <fieldset>
+      <label for="name" id="name-label"><strong>Name:</strong> <input id="name" name="name" type="text" placeholder="Enter your name" required /></label>
+      <label for="email" id="email-label"><strong>Email:</strong> <input id="email" name="email" type="email" placeholder="Enter your email" required /></label>
+    </fieldset>
+    <fieldset>
+      <label for="number" id="number-label"><strong>How many people are going on the trip?</strong> <input id="number" type="number" name="number" min="1" max="15" placeholder="Specify the numer of people" /></label>
+      <label for="dropdown"><strong>What is the main purpose of your trip?</strong>
+          <select id="dropdown" name="purpose">
+            <option value="">(select the most suitable option)</option>
+            <option value="1">Business</option>
+            <option value="2">Tourism</option>
+            <option value="3">Both business and tourism</option>
+          </select>
+        </label>
+      <label><strong>Have you ever visited Rome?</strong>
+      <label><input type="radio" name="previous-visits" value="1" /> Yes, once</label>
+      <label><input type="radio" name="previous-visits" value="2" /> Yes, several times</label>
+      <label><input type="radio" name="previous-visits" value="0" /> No</label>
+      </label>
+     <label><strong>What would you like to include in your trip?</strong>
+      <label><input type="checkbox" name="activities" value="citytours"> Guided city tours</label>
+      <label><input type="checkbox" name="activities" value="sites"> Visiting historical/archeological sites</label>
+      <label><input type="checkbox" name="activities" value="museums"> Visiting churches and/or museums</label>
+      <label><input type="checkbox" name="activities" value="cuisine"> Learning more about the local cuisine</label>
+      <label><input type="checkbox" name="activities" value="viewpoints"> Visiting panoramic viewpoints</label>
+     <label><input type="checkbox" name="activities" value="shopping"> Shopping</label>
+      </label>
+      </fieldset>
+      <fieldset>
+      <label for="comments"><strong>Any additional comments:</strong>
+        <textarea id="comments" name="comments" rows="2" cols="40" placeholder="Enter you comment here..."></textarea>
+      </label>
+      </fieldset>
+      <input type="submit" value="Submit" id="submit" /> 
+    </form>
+  </body>
+</html>
